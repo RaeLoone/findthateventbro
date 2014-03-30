@@ -11,13 +11,15 @@ class EventsController < ApplicationController
     # what it was
     # @events = Event.all
     
-    event = Event.new 
-    @events = event.process("23rd Street")
+    # Testing the model with the API in event.rb
+    # event = Event.new 
+    # @events = event.process("23rd Street")
 
     # what you want
     # event = Event.new 
     # @events = event.process(params[:q])
 
+    # Trying to connect the method .process to  @hash to put results in the marker to be display on map. 
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event.latitude
       marker.lng event.longitude
