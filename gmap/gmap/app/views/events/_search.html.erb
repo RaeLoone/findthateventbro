@@ -1,0 +1,5 @@
+<%= form_tag("events", method: "get") do %>
+  <%= label_tag(:q, "Find Events Near You:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>	
